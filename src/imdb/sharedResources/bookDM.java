@@ -1,5 +1,5 @@
 package imdb.sharedResources;
 
-public class bookDM {
+public class BookDM {
 
 }

@@ -1,5 +1,5 @@
 package imdb.infrastructure;
 
-public class Client {
+public class ImdbClient {
 
 }

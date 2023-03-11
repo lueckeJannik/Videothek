@@ -1,5 +1,5 @@
 package imdb.sharedResources;
 
-public class imdbResponse {
+public class ImdbResponse {
 
 }

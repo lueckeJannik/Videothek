@@ -1,5 +1,5 @@
 package imdb.infrastructure;
 
-public interface Port {
+public class ImdbAdapter {
 
 }
