@@ -1,5 +1,5 @@
 package bills.presentation;
 
-public interface BillingController {
+public class BillingController {
     
 }

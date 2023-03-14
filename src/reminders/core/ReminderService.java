@@ -1,18 +1,27 @@
 package reminders.core;
 
-import DomainModel.*;
-
+import reminders.core.ports.ReminderPort;
+import shared.domainModel.User;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReminderService {
+
+    private ReminderPort port;
+    public ReminderService(ReminderPort port){
+        this.port = port;
+    }
+
+    public void setPort(ReminderPort port){
+        this.port = port;
+    }
 
     public void checkReminders() {
         List<User> u = getAllusers();
         for (User user : u) {
             boolean x = checkUserReminder(user);
             if(x){
-                
+                port.sendReminder(user.getMail(), generateReminder(user.getName()));
             }
         }
     }
@@ -29,5 +38,9 @@ public class ReminderService {
         else{
             return false;
         }
+    }
+
+    private String generateReminder(String name){
+        return name + "Bitte melde dich!";
     }
 }
